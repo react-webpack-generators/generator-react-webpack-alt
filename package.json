@@ -1,6 +1,7 @@
 {
   "name": "generator-react-webpack-alt",
   "version": "0.1.0",
+  "private": true,
   "description": "Yeoman generator for ReactJS and Webpack with Alt.js",
   "keywords": [
     "yeoman-generator",
@@ -26,9 +27,11 @@
     "test": "mocha"
   },
   "dependencies": {
+    "generator-react-webpack": "https://github.com/weblogixx/generator-react-webpack.git#rewrite",
+    "html-wiring": "^1.2.0",
+    "lodash": "^3.10.1",
     "yeoman-generator": "^0.20.3",
-    "yeoman-welcome": "^1.0.1",
-    "generator-react-webpack": "https://github.com/weblogixx/generator-react-webpack.git#rewrite"
+    "yeoman-welcome": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^3.2.0",
