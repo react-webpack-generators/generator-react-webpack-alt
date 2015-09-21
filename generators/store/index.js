@@ -12,9 +12,9 @@ module.exports = generator.NamedBase.extend({
   writing: function() {
 
     let cleanedPaths = utils.yeoman.getCleanedPathName(this.name, 'Store');
-    let componentParts = cleanedPaths.split('/');
-    let componentBaseName = _.capitalize(componentParts.pop());
-    let componentPartPath = componentParts.join('/');
+    let storeParts = cleanedPaths.split('/');
+    let storeBaseName = _.capitalize(storeParts.pop());
+    let storePartPath = storeParts.join('/');
 
     let storePath = utils.config.getChoiceByKey('path', 'store').path;
     let testPath = utils.config.getChoiceByKey('path', 'test').path;
@@ -22,19 +22,19 @@ module.exports = generator.NamedBase.extend({
     // Copy the base store
     this.fs.copyTpl(
       this.templatePath('Store.js'),
-      this.destinationPath(`${storePath}/${componentPartPath}/${componentBaseName}.js`),
+      this.destinationPath(`${storePath}/${storePartPath}/${storeBaseName}.js`),
       {
-        storeClass: componentBaseName
+        storeClass: storeBaseName
       }
     );
 
     // Copy the unit test
     this.fs.copyTpl(
       this.templatePath('Test.js'),
-      this.destinationPath(`${testPath}/stores/${componentPartPath}/${componentBaseName}Test.js`),
+      this.destinationPath(`${testPath}/stores/${storePartPath}/${storeBaseName}Test.js`),
       {
-        storeClass: componentBaseName,
-        storePath: `stores/${componentPartPath}/${componentBaseName}`
+        storeClass: storeBaseName,
+        storePath: `stores/${storePartPath}/${storeBaseName}`
       }
     );
   }

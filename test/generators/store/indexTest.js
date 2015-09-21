@@ -36,8 +36,8 @@ describe('react-webpack-alt:store', () => {
     });
 
     it('should export the created store as well as the wrapped altStore', (done) => {
-      createGeneratedStore('test', () => {
 
+      createGeneratedStore('test', () => {
         assert.fileContent('src/stores/TestStore.js', `export class TestStore`);
         assert.fileContent('src/stores/TestStore.js', `export default alt.createStore(TestStore, 'TestStore'`);
         done();
