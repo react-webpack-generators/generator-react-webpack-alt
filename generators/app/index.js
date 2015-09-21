@@ -35,6 +35,9 @@ module.exports = generator.Base.extend({
         options: {},
         args: ['Dispatcher']
       });
+
+      // Install alt.js as requirement
+      this.npmInstall(['alt'], { save: true });
     });
   }
 });
