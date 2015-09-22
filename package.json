@@ -27,7 +27,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "generator-react-webpack": "https://github.com/weblogixx/generator-react-webpack.git#rewrite",
+    "generator-react-webpack": "https://github.com/newtriks/generator-react-webpack.git#master",
     "html-wiring": "^1.2.0",
     "lodash": "^3.10.1",
     "yeoman-generator": "^0.20.3",
