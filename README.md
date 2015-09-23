@@ -9,12 +9,13 @@ Generator-React-Webpack-Alt includes support for creating new stores as well as 
 
 It also has support for most of the features that are available in its parent project, generator-react-webpack. This includes the run-configuration, webpack, esLint and test-environment.
 
-## Planned Features
+## Planned Features and updates
 There are currently some features missing from the generator. These will be available in a later version:
 
 - [ ] Creation of Components like in Generator-React-Webpack (please use this configurator until it is implemented!)
 - [ ] Creation of Action/Store-Pairs via a single subgenerator (react-webpack-alt:all).
 - [ ] Creation of Unittests for Actions
+- [ ] Add a correct versioning for [generator-react-webpack](https://github.com/newtriks/generator-react-webpack)
 
 ---
 
@@ -47,7 +48,7 @@ yo react-webpack-alt:all my/namespaced/functions/name
 The above command will create a new action and store, as well as its basic testcase.
 
 ## Usage
-Please take a look at react-webpack-template for an in depth explanation or use `npm run` to get a list of all commands available for building and running your application.
+Please take a look at [react-webpack-template](https://github.com/weblogixx/react-webpack-template) for an in depth explanation or use `npm run` to get a list of all commands available for building and running your application.
 
 ## Contribute
 
@@ -59,4 +60,4 @@ Contributions are welcomed. When submitting a bugfix, write a test that exposes 
 
 ## License
 
-[BSD license](http://opensource.org/licenses/bsd-license.php)
+[MIT license](http://opensource.org/licenses/MIT)
