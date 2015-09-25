@@ -2,20 +2,21 @@
 > Generator-React-Webpack - with Flux Support (using alt.js)
 
 ## What is it for?
-This generator can be used to create and manage projects that use React, Webpack and Flux (using alt.js as implementation). It uses generator-react-webpack as a base and extends it to create new stores and actions.
+This generator can be used to create and manage projects that use React, Webpack and Flux (using alt.js as implementation). It uses [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) as a base and extends it to create new stores and actions.
 
 ## What is included?
-Generator-React-Webpack-Alt includes support for creating new stores as well as their unittests, as well as the creation of actions.
+Generator-React-Webpack-Alt includes support for creating new stores as well as their tests and the creation of actions and components.
 
 It also has support for most of the features that are available in its parent project, generator-react-webpack. This includes the run-configuration, webpack, esLint and test-environment.
 
 ## Planned Features and updates
 There are currently some features missing from the generator. These will be available in a later version:
 
-- [ ] Creation of Components like in Generator-React-Webpack (please use this configurator until it is implemented!)
+- [x] Creation of Components like in Generator-React-Webpack (please use this configurator until it is implemented!)
+- [ ] Creation of Datasources
 - [ ] Creation of Action/Store-Pairs via a single subgenerator (react-webpack-alt:all).
 - [ ] Creation of Unittests for Actions
-- [ ] Add a correct versioning for [generator-react-webpack](https://github.com/newtriks/generator-react-webpack)
+- [ ] Add a correct versioning for [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) so we dont need to draw the current git master.
 
 ---
 
@@ -32,6 +33,11 @@ mkdir my-new-project && cd my-new-project
 
 # Run the generator
 yo react-webpack-alt
+```
+
+## Generating new components
+```bash
+yo react-webpack-alt:component my/namespaced/components/name
 ```
 
 ## Generating new stores and actions
