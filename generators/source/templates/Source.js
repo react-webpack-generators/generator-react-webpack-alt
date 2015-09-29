@@ -9,7 +9,7 @@ const <%= sourceClass %> = {
     },
     loading() {},
     success() {},
-    error() {},
+    error() {}
   }
 };
 

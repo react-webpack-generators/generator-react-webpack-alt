@@ -14,7 +14,8 @@ There are currently some features missing from the generator. These will be avai
 
 - [x] Creation of Components like in Generator-React-Webpack
 - [x] Creation of Datasources
-- [ ] Creation of Action/Store-Pairs via a single subgenerator (react-webpack-alt:all).
+- [x] Creation of Action/Store-Pairs via a single subgenerator (react-webpack-alt:all).
+- [ ] Automatic inclusion of generated actions into stores when using subgenerator "all"
 - [ ] Creation of Unittests for Actions
 - [ ] Add a correct versioning for [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) so we dont need to draw the current git master.
 
@@ -47,11 +48,9 @@ yo react-webpack-alt:component my/namespaced/components/name
 yo react-webpack-alt:action my/namespaced/actions/name
 yo react-webpack-alt:store my/namespaced/stores/name
 
-# Not yet implemented :(
+# Create a new store, as well as a dedicated action for it
 yo react-webpack-alt:all my/namespaced/functions/name
 ```
-
-The above command will create a new action and store, as well as its basic testcase.
 
 ## Generating sources
 Stores in alt.js can use so called __sources__ to make the usage of async actions easier for you. Please look at [the alt.js documentation for this feature](http://alt.js.org/docs/async/) to see how this can be implemented.

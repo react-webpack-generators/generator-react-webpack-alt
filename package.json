@@ -29,7 +29,6 @@
   "dependencies": {
     "generator-react-webpack": "https://github.com/newtriks/generator-react-webpack.git#master",
     "html-wiring": "^1.2.0",
-    "lodash": "^3.10.1",
     "yeoman-generator": "^0.20.3",
     "yeoman-welcome": "^1.0.1"
   },

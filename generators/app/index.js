@@ -1,5 +1,4 @@
 'use strict';
-
 let generator = require('yeoman-generator');
 
 module.exports = generator.Base.extend({

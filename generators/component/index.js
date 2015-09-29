@@ -1,5 +1,4 @@
 'use strict';
-
 let generator = require('yeoman-generator');
 
 module.exports = generator.NamedBase.extend({
@@ -14,5 +13,4 @@ module.exports = generator.NamedBase.extend({
       args: [ this.name ]
     });
   }
-
 });

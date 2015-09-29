@@ -1,7 +1,6 @@
 'use strict';
 let generator = require('yeoman-generator');
 let utils = require('generator-react-webpack/utils/all');
-let _ = require('lodash');
 
 module.exports = generator.NamedBase.extend({
 
@@ -11,30 +10,33 @@ module.exports = generator.NamedBase.extend({
 
   writing: function() {
 
+    let destinationPath = utils.yeoman.getDestinationPath(this.name, 'store', 'Store');
+    let baseName = utils.yeoman.getDestinationClassName(this.name, 'source', 'Store');
+
+    // @todo: Clean up this stuff. Was planned to be exchanged for utils.yeoman.getDestination
     let cleanedPaths = utils.yeoman.getCleanedPathName(this.name, 'Store');
     let storeParts = cleanedPaths.split('/');
-    let storeBaseName = _.capitalize(storeParts.pop());
+    storeParts.pop();
     let storePartPath = storeParts.join('/');
 
-    let storePath = utils.config.getChoiceByKey('path', 'store').path;
     let testPath = utils.config.getChoiceByKey('path', 'test').path;
 
     // Copy the base store
     this.fs.copyTpl(
       this.templatePath('Store.js'),
-      this.destinationPath(`${storePath}/${storePartPath}/${storeBaseName}.js`),
+      this.destinationPath(destinationPath),
       {
-        storeClass: storeBaseName
+        storeClass: baseName
       }
     );
 
     // Copy the unit test
     this.fs.copyTpl(
       this.templatePath('Test.js'),
-      this.destinationPath(`${testPath}/stores/${storePartPath}/${storeBaseName}Test.js`),
+      this.destinationPath(`${testPath}/stores/${storePartPath}/${baseName}Test.js`),
       {
-        storeClass: storeBaseName,
-        storePath: `stores/${storePartPath}/${storeBaseName}`
+        storeClass: baseName,
+        storePath: `stores/${storePartPath}/${baseName}`
       }
     );
   }
