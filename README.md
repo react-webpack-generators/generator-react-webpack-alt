@@ -17,7 +17,7 @@ There are currently some features missing from the generator. These will be avai
 - [x] Creation of Action/Store-Pairs via a single subgenerator (react-webpack-alt:all).
 - [ ] Automatic inclusion of generated actions into stores when using subgenerator "all"
 - [ ] Creation of Unittests for Actions
-- [ ] Add a correct versioning for [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) so we dont need to draw the current git master.
+- [x] Add a correct versioning for [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) so we dont need to draw the current git master.
 
 ---
 
