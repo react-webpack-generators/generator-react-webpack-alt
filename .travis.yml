@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - '4.1.0'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-react-webpack-alt' ]; then cd .. && eval "mv $currentfolder generator-react-webpack-alt" && cd generator-react-webpack-alt; fi
