@@ -1,6 +1,9 @@
 # generator-react-webpack-alt
 > Generator-React-Webpack - with Flux Support (using alt.js)
 
+[![Build Status](https://travis-ci.org/weblogixx/generator-react-webpack-alt.svg?branch=master)](https://travis-ci.org/weblogixx/generator-react-webpack-alt) ![Amount of Downloads per month](https://img.shields.io/npm/dm/generator-react-webpack-alt.svg "Amount of Downloads") ![Dependency Tracker](https://img.shields.io/david/weblogixx/generator-react-webpack-alt.svg "Dependency Tracker") ![Dependency Tracker](https://img.shields.io/david/dev/weblogixx/generator-react-webpack-alt.svg "Dependency Tracker") ![Node Version](https://img.shields.io/node/v/generator-react-webpack-alt.svg "Node Version")
+
+
 ## What is it for?
 This generator can be used to create and manage projects that use React, Webpack and Flux (using [alt.js](http://alt.js.org/) as implementation). It depends on [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) as a base and extends it to create new stores and actions.
 
