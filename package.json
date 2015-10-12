@@ -1,6 +1,6 @@
 {
   "name": "generator-react-webpack-alt",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Yeoman generator for ReactJS and Flux (alt.js) via Webpack",
   "keywords": [
     "yeoman-generator",
