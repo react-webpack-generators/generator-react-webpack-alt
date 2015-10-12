@@ -27,7 +27,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "generator-react-webpack": "^2.1.0",
+    "generator-react-webpack": "^2.2.0",
     "html-wiring": "^1.2.0",
     "yeoman-generator": "^0.20.3",
     "yeoman-welcome": "^1.0.1"
