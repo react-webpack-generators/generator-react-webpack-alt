@@ -8,8 +8,16 @@ module.exports = generator.NamedBase.extend({
   },
 
   writing: function() {
+
+    // Build options
+    let opts = {};
+
+    if(this.options.stateless === true) {
+      opts.stateless = true;
+    }
+
     this.composeWith('react-webpack:component', {
-      options: {},
+      options: opts,
       args: [ this.name ]
     });
   }
