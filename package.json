@@ -24,10 +24,13 @@
     "url": "git://github.com/weblogixx/generator-react-webpack-alt.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "release:major": "npm version major && npm publish && git push --follow-tags",
+    "release:minor": "npm version minor && npm publish && git push --follow-tags",
+    "release:patch": "npm version patch && npm publish && git push --follow-tags"
   },
   "dependencies": {
-    "generator-react-webpack": "^2.2.0",
+    "generator-react-webpack": "^3.0.0",
     "html-wiring": "^1.2.0",
     "yeoman-generator": "^0.21.0",
     "yeoman-welcome": "^1.0.1"
