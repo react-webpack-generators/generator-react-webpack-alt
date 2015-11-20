@@ -1,3 +1,6 @@
+/*eslint-env node, mocha */
+/*global expect */
+/*eslint no-console: 0*/
 'use strict';
 
 import alt from 'components/Dispatcher';
@@ -8,7 +11,7 @@ describe('<%= storeClass %>', () => {
 
   let storeClass;
 
-  // Clean up localStorage before each try
+  // Instanciate a new store for every test
   beforeEach(() => {
     storeClass = AltTestingUtils.makeStoreTestable(alt, <%= storeClass %>);
   });
