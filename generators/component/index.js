@@ -17,9 +17,10 @@ module.exports = generator.Base.extend({
       opts.stateless = true;
     }
 
-    this.composeWith('react-webpack:component', {
-      options: opts,
-      args: [ this.name ]
-    });
+    this.composeWith(
+      'react-webpack',
+      { options: opts, args: [ this.name ] },
+      { local: require.resolve('generator-react-webpack/generators/component') }
+    );
   }
 });
