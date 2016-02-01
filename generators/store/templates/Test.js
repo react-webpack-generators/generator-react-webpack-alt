@@ -5,7 +5,7 @@
 
 import alt from 'components/Dispatcher';
 import { <%= storeClass %> } from '<%= storePath %>';
-import AltTestingUtils from 'alt/utils/AltTestingUtils';
+import AltTestingUtils from 'alt-utils/lib/AltTestingUtils';
 
 describe('<%= storeClass %>', () => {
 
