@@ -18,7 +18,7 @@
     "email": "cs@weblogixx.de",
     "url": "https://github.com/weblogixx"
   },
-  "main": "generators/action/index.js",
+  "main": "generators/app/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/weblogixx/generator-react-webpack-alt.git"

@@ -1,3 +1,7 @@
+## 2.3.1:
+
+1. Adjusted package json main path to generators/app/index (Closes https://github.com/weblogixx/generator-react-webpack-alt/issues/7 as suggested by [sthzg](https://github.com/sthzg))
+
 ## 2.3.0:
 
 1. Added alt-utils and alt-container as default dependencies.
