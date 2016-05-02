@@ -1,3 +1,7 @@
+## 2.3.2
+
+1. Added new version of yeoman-generator
+
 ## 2.3.1:
 
 1. Adjusted package json main path to generators/app/index (Closes https://github.com/weblogixx/generator-react-webpack-alt/issues/7 as suggested by [sthzg](https://github.com/sthzg))

@@ -32,7 +32,7 @@
   "dependencies": {
     "generator-react-webpack": "^3.2.0",
     "html-wiring": "^1.2.0",
-    "yeoman-generator": "^0.22.0",
+    "yeoman-generator": "^0.23.0",
     "yeoman-welcome": "^1.0.1"
   },
   "devDependencies": {
