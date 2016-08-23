@@ -19,12 +19,17 @@
     "url": "https://github.com/weblogixx"
   },
   "main": "generators/app/index.js",
+  "files": [
+    "generators"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/weblogixx/generator-react-webpack-alt.git"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "istanbul cover _mocha",
+    "test:watch": "mocha -w",
+    "coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "release:major": "npm version major && npm publish && git push --follow-tags",
     "release:minor": "npm version minor && npm publish && git push --follow-tags",
     "release:patch": "npm version patch && npm publish && git push --follow-tags"
@@ -32,12 +37,14 @@
   "dependencies": {
     "generator-react-webpack": "^3.2.0",
     "html-wiring": "^1.2.0",
-    "yeoman-generator": "^0.23.0",
+    "yeoman-generator": "^0.24.0",
     "yeoman-welcome": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^3.2.0",
-    "mocha": "^2.3.2",
+    "coveralls": "^2.11.12",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.0",
     "yeoman-assert": "^2.1.1",
     "yeoman-test": "^1.0.0"
   },
