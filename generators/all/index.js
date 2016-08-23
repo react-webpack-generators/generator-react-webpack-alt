@@ -1,14 +1,14 @@
 'use strict';
-let generator = require('yeoman-generator');
+const Generators = require('yeoman-generator');
 
-module.exports = generator.Base.extend({
+class AllGenerator extends Generators.Base {
 
-  constructor: function() {
-    generator.Base.apply(this, arguments);
+  constructor(args, options) {
+    super(args, options);
     this.argument('name', { type: String, required: true });
-  },
+  }
 
-  writing: function() {
+  writing() {
 
     // Generate the alt store
     // @todo: Implement automatic inclusion of generated action
@@ -24,4 +24,6 @@ module.exports = generator.Base.extend({
       { local: require.resolve('../action') }
     );
   }
-});
+}
+
+module.exports = AllGenerator;

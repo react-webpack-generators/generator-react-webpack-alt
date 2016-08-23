@@ -1,16 +1,12 @@
 'use strict';
-let generator = require('yeoman-generator');
+const ReactWebpackGenerator = require('yeoman-generator');
 
-module.exports = generator.Base.extend({
+/**
+ * Base generator. Will copy all required files from react-webpack-template
+ */
+class AppGenerator extends ReactWebpackGenerator.Base {
 
-  constructor: function() {
-    generator.Base.apply(this, arguments);
-
-    this.option('skip-install');
-  },
-
-  install: function() {
-
+  install() {
     if(!this.options['skip-install']) {
       this.installDependencies({ bower: false });
     }
@@ -40,4 +36,6 @@ module.exports = generator.Base.extend({
       this.npmInstall(['alt-utils'], { saveDev: true });
     });
   }
-});
+}
+
+module.exports = AppGenerator;

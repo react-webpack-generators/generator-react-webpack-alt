@@ -1,26 +1,15 @@
 'use strict';
-let generator = require('yeoman-generator');
+const ReactWebpackGenerator = require('generator-react-webpack/generators/component');
 
-module.exports = generator.Base.extend({
+class ComponentGenerator extends ReactWebpackGenerator {
 
-  constructor: function() {
-    generator.Base.apply(this, arguments);
-    this.argument('name', { type: String, required: true });
-  },
-
-  writing: function() {
-
-    // Build options
-    let opts = {};
-
-    if(this.options.stateless === true) {
-      opts.stateless = true;
-    }
-
+  writing() {
     this.composeWith(
       'react-webpack',
-      { options: opts, args: [ this.name ] },
+      { options: this.options, args: [ this.name ] },
       { local: require.resolve('generator-react-webpack/generators/component') }
     );
   }
-});
+}
+
+module.exports = ComponentGenerator;

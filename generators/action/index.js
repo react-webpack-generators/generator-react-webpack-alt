@@ -1,15 +1,15 @@
 'use strict';
-let generator = require('yeoman-generator');
-let utils = require('generator-react-webpack/utils/yeoman');
+const Generators = require('yeoman-generator');
+const utils = require('generator-react-webpack/utils/yeoman');
 
-module.exports = generator.Base.extend({
+class ActionGenerator extends Generators.Base {
 
-  constructor: function() {
-    generator.Base.apply(this, arguments);
+  constructor(args, options) {
+    super(args, options);
     this.argument('name', { type: String, required: true });
-  },
+  }
 
-  writing: function() {
+  writing() {
 
     let destinationPath = utils.getDestinationPath(this.name, 'action', 'Actions');
     let baseName = utils.getDestinationClassName(this.name, 'action', 'Actions');
@@ -22,4 +22,6 @@ module.exports = generator.Base.extend({
       }
     );
   }
-});
+}
+
+module.exports = ActionGenerator;

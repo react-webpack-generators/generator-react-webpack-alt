@@ -1,14 +1,14 @@
 'use strict';
-let generator = require('yeoman-generator');
+const Generators = require('yeoman-generator');
 
-module.exports = generator.Base.extend({
+class DispatcherGenerator extends Generators.Base {
 
-  constructor: function() {
-    generator.Base.apply(this, arguments);
+  constructor(args, options) {
+    super(args, options);
     this.argument('name', { type: String, required: true });
-  },
+  }
 
-  writing: function() {
+  writing() {
 
     // Copy the dispatcher file
     this.fs.copyTpl(
@@ -16,4 +16,6 @@ module.exports = generator.Base.extend({
       this.destinationPath(`src/components/${this.name}.js`)
     );
   }
-});
+}
+
+module.exports = DispatcherGenerator;

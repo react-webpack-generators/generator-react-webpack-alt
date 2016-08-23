@@ -1,6 +1,6 @@
 {
   "name": "generator-react-webpack-alt",
-  "version": "2.3.2",
+  "version": "3.0.0",
   "description": "Yeoman generator for ReactJS and Flux (alt.js) via Webpack",
   "keywords": [
     "yeoman-generator",
@@ -32,12 +32,12 @@
     "test": "istanbul cover _mocha",
     "test:watch": "mocha -w",
     "coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "release:major": "npm version major && npm publish && git push --follow-tags",
-    "release:minor": "npm version minor && npm publish && git push --follow-tags",
-    "release:patch": "npm version patch && npm publish && git push --follow-tags"
+    "release:major": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
+    "release:minor": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
+    "release:patch": "npm version prerelease && git push --follow-tags && npm publish --tag beta"
   },
   "dependencies": {
-    "generator-react-webpack": "^3.2.0",
+    "generator-react-webpack": "^4.0.1-1",
     "html-wiring": "^1.2.0",
     "yeoman-generator": "^0.24.0",
     "yeoman-welcome": "^1.0.1"
