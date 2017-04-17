@@ -26,7 +26,7 @@ There are currently some features missing from the generator. These will be avai
 ## Installation
 ```bash
 npm install -g yo
-npm install -g generator-react-webpack-alt
+npm install generator-react-webpack-alt
 ```
 
 ## Setting up projects
