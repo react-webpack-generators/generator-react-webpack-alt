@@ -9,7 +9,7 @@ This generator can be used to create and manage projects that use React, Webpack
 ## What is included?
 Generator-React-Webpack-Alt includes support for creating new stores (and tests), as well as the creation of actions, components and sources.
 
-It also has support for the the features that are available in its parent project, generator-react-webpack. This includes the run-configuration, webpack, esLint and test-environment.
+It also has support for the features that are available in its parent project, generator-react-webpack. This includes the run-configuration, webpack, esLint and test-environment.
 
 ## Planned Features and updates
 There are currently some features missing from the generator. These will be available in a later version:
